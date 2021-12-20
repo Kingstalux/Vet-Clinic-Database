@@ -4,7 +4,7 @@ SELECT * FROM animals
 WHERE name LIKE '%mon%';
 
 SELECT name FROM animals
-WHERE date_of_birth > '2016-01-01' and date_of_birth < '2019-01-01';
+WHERE date_of_birth >= '2016-01-01' and date_of_birth <= '2019-01-01';
 
 SELECT name FROM animals
 WHERE neutered = true and escape_attempts < 3;
