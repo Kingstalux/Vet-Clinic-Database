@@ -2,7 +2,7 @@
 
 # Vet Clinic
 
-> In this project I used a relational database to create the initial data structure for a vet clinic. I created a table to store animals' information, insert some data into it, and query it.
+> In this project I used a relational database to create the initial data structure for a vet clinic. I created a table to store animals' information, insert some data into it, and query it. Next, I used transactions to update and delete records. I also used my knowledge of aggregate functions and GROUP BY to answer analytical questions.
 
 ## Built With
 
