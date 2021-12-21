@@ -94,3 +94,12 @@ ON owners.id = animals.owners_id;
 
 SELECT species_id, COUNT(name) FROM animals
 GROUP BY species_id;
+
+SELECT * FROM animals
+WHERE species_id = 2 and owners_id = 2;
+
+SELECT * FROM animals
+WHERE escape_attempts = 0 and owners_id = 5;
+
+SELECT owners_id, COUNT(name) FROM animals
+GROUP BY owners_id;
