@@ -74,3 +74,23 @@ GROUP BY neutered;
 SELECT neutered, AVG(escape_attempts) FROM animals
 WHERE date_of_birth >= '1990-01-01' and date_of_birth <= '2000-01-01'
 GROUP BY neutered;
+
+SELECT  *
+FROM animals
+INNER JOIN owners
+ON animals.owners_id = owners.id
+WHERE owners.id = 4;
+
+SELECT  *
+FROM animals
+INNER JOIN species
+ON animals.species_id = species.id
+WHERE species.id = 1;
+
+SELECT  *
+FROM owners
+INNER JOIN animals
+ON owners.id = animals.owners_id;
+
+SELECT species_id, COUNT(name) FROM animals
+GROUP BY species_id;
