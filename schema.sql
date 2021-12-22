@@ -49,9 +49,7 @@ CREATE TABLE vets(
 
 CREATE TABLE specializations(
 	vet_id integer,
-	species_id integer,
-	species text,
-	vets text
+	species_id integer
 );
 
 ALTER TABLE specializations
