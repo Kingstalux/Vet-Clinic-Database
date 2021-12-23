@@ -61,8 +61,6 @@ ADD FOREIGN KEY (vet_id) REFERENCES vets(id);
 CREATE TABLE visits(
 	vet_id integer,
 	animal_id integer,
-	vets text,
-	animals text,
 	visit_date date
 );
 

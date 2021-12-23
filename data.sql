@@ -60,7 +60,8 @@ INSERT INTO specializations(vet_id, species_id)
 VALUES (1, 1),
 (3, 1),
 (3, 2),
-(4, 2);
+(4, 2),
+(2, null);
 
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg, species_id, owners_id) 
 VALUES('Plantmon', '2022-11-15', 2, true,  -5.7, 2, 3);
