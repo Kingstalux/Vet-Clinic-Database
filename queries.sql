@@ -103,3 +103,65 @@ WHERE escape_attempts = 0 and owners_id = 5;
 
 SELECT owners_id, COUNT(name) FROM animals
 GROUP BY owners_id;
+
+SELECT name
+FROM animals
+INNER JOIN visits
+ON animals.id = visits.animal_id
+WHERE vet_id = 1 
+and visit_date = (
+	SELECT MAX(visit_date) FROM visits
+	WHERE vet_id = 1
+);
+
+SELECT COUNT(animal_id) FROM visits
+WHERE vet_id = 3;
+
+SELECT name, species_id
+FROM vets
+INNER JOIN specializations
+ON vets.id = specializations.vet_id;
+
+SELECT name()
+FROM animals
+INNER JOIN visits
+ON animals.id = visits.animal_id
+WHERE vet_id = 3 and visit_date >= '2020-04-01'
+and visit_date <= '2020-07-30';
+
+SELECT name, COUNT(animal_id)
+FROM animals
+INNER JOIN visits
+ON animals.id = visits.animal_id
+GROUP BY name;
+
+SELECT name
+FROM animals
+INNER JOIN visits
+ON animals.id = visits.animal_id
+WHERE vet_id = 2 
+and visit_date = (
+	SELECT MIN(visit_date) FROM visits
+	WHERE vet_id = 2
+);
+
+SELECT *
+FROM animals
+INNER JOIN visits
+ON animals.id = visits.animal_id
+WHERE visit_date = (
+	SELECT MAX(visit_date) FROM visits
+);
+
+SELECT name, COUNT(animal_id)
+FROM visits
+INNER JOIN vets
+ON visits.vet_id = vets.id
+GROUP BY name;
+
+SELECT species_id, COUNT(name)
+FROM animals
+INNER JOIN visits
+ON animals.id = visits.animal_id
+WHERE vet_id = 2
+GROUP BY species_id;
