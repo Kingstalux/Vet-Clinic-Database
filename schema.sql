@@ -69,3 +69,5 @@ ADD FOREIGN KEY (vet_id) REFERENCES vets(id);
 
 ALTER TABLE visits
 ADD FOREIGN KEY (animal_id) REFERENCES animals(id);
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
