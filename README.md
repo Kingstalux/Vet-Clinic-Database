@@ -8,6 +8,7 @@
 
 - Postgresql
 - psql
+- SQL
 
 ## Authors
 
