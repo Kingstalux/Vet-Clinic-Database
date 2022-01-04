@@ -51,3 +51,10 @@ CREATE TABLE medical_treatment(
     CONSTRAINT fk_medical_treatment FOREIGN KEY(treatment_id)
     REFERENCES treatments(id)
 );
+
+
+-- Optimized Execution analysis by creating Indexes
+CREATE INDEX treatment_id_asc ON invoice_items (treatment_id ASC);
+CREATE INDEX medical_histories_id_asc ON invoices (medical_histories_id ASC);
+CREATE INDEX invoices_asc ON invoice_items (invoice_id ASC);
+CREATE INDEX patients_asc ON medical_histories (patient_id ASC);
