@@ -80,3 +80,6 @@ CREATE INDEX date_of_visit_asc ON visits (date_of_visit ASC);
 CREATE INDEX full_name_asc ON owners (full_name ASC);
 CREATE INDEX owners_age_asc ON owners (age ASC);
 CREATE INDEX emails_asc ON owners (email ASC);
+
+
+
